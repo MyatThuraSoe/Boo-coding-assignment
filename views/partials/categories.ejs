@@ -1,0 +1,121 @@
+<%
+const categories = [
+{
+  name: 'Anime',
+  url: 'https://boo.world/u/anime'
+},
+{
+  name: 'Music',
+  url: 'https://boo.world/u/Music'
+},
+{
+  name: 'Politics',
+  url: 'https://boo.world/u/Politics'
+},
+{
+  name: 'Historians',
+  url: 'https://boo.world/u/Historians'
+},
+{
+  name: 'Gaming',
+  url: 'https://boo.world/u/gaming'
+},
+{
+  name: 'Art',
+  url: 'https://boo.world/u/art'
+},
+{
+  name: 'Comucs',
+  url: 'https://boo.world/u/comics'
+},
+{
+  name: 'Science',
+  url: 'https://boo.world/u/science'
+},
+{
+  name: 'Philosophy',
+  url: 'https://boo.world/u/Philosophy'
+},
+{
+  name: 'Movies',
+  url: 'https://boo.world/u/Movies'
+},
+{
+  name: 'Television',
+  url: 'https://boo.world/u/Television'
+},
+{
+  name: 'Literature',
+  url: 'https://boo.world/u/Literature'
+},
+{
+  name: 'Business',
+  url: 'https://boo.world/u/Business'
+},
+{
+  name: 'Religion',
+  url: 'https://boo.world/u/Religion'
+},
+{
+  name: 'Pop Culture',
+  url: 'https://boo.world/u/Pop Culture'
+},
+{
+  name: 'Internet',
+  url: 'https://boo.world/u/Internet'
+}
+  
+];
+const highlighted_categories = [
+  'Anime', 'Movies'
+];
+%>
+
+<div class="col sqs-col-2 sqs-col-categories" style="padding-bottom: 2em;">
+  <a href="/">
+    <h3 style="padding-left: 16px; font-weight: 500; font-size: 1.8em; margin: 0;">
+      Soulverse
+    </h3>
+  </a>
+  <p style="padding-left: 16px; margin-right: 16px; font-weight: 400; font-size: 1em; margin: 0">
+    MBTI personality database
+  </p>
+  <div style="margin-left: 16px" class="categories">
+    <i class="material-icons category-icon">widgets</i>
+    <p class="category-title">
+      Categories
+    </p>
+    <i id="categories-icon-mobile" class="material-icons category-icon" style="cursor: pointer" onclick="toggleMenu()">expand_more</i>
+    <i id="categories-icon" class="material-icons category-icon" style="cursor: pointer" onclick="toggleMenu()">expand_less</i>
+  </div>
+  <div id="categories-list-mobile" style="border-left: 2px solid #c1c1c1; margin-top: 1em; margin-left: 2em; display:none">
+    <% categories.forEach(function(c) { %>
+      <p style="margin: 0px 2em 0px 1em; color: #6f6e6c" class="">
+
+        <% if (highlighted_categories.some(x => x == c.name)) { %>
+          <a style="margin: 0px 0px 0px 0px; color: #4edcd8; font-weight: bold; text-decoration: none" href="<%= c.url %>"><%= c.name %>
+          </a>
+        <% } else { %>
+          <a style="margin: 0px 0px 0px 0px; color: #6f6e6c; text-decoration: none" href="<%= c.url %>"><%= c.name %>
+          </a>
+        <% } %>
+
+      </p>
+    <% }); %>
+  </div>
+  <div id="categories-list" style="border-left: 2px solid #c1c1c1; margin-top: 1em; margin-left: 2em;">
+    <% categories.forEach(function(c) { %>
+      <p style="margin: 0px 2em 0px 1em; color: #6f6e6c" class="">
+
+        <% if (highlighted_categories.some(x => x == c.name)) { %>
+          <a style="margin: 0px 0px 0px 0px; color: #4edcd8; font-weight: bold; text-decoration: none" href="<%= c.url %>"><%= c.name %>
+          </a>
+        <% } else { %>
+          <a style="margin: 0px 0px 0px 0px; color: #6f6e6c; text-decoration: none" href="<%= c.url %>"><%= c.name %>
+          </a>
+        <% } %>
+
+      </p>
+    <% }); %>
+  </div>
+</div>

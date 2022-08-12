@@ -1,0 +1,245 @@
+<%- include('partials/prologue.ejs', {title: `${profile.name} MBTI | Boo Personality Database`, description: `What is ${profile.name}'s MBTI personality type? Find out what ${profile.name}'s Myers Briggs, Enneagram, and Zodiac sign are in the Soulverse, the MBTI personality database of celebrities and fictional characters.`}) %>
+
+                <div class="row sqs-row">
+                  <%- include('partials/categories.ejs') %>
+                  <div class="col sqs-col-10 sqs-col-page my-container">
+                    <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-2e6206ba777e9c6841a8">
+                      <div class="sqs-block-content">
+                        <h2 class="name"><%= profile.name %> <span style="color: #4edcd8; font-weight: bold">MBTI</span>
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="row sqs-row">
+                      <div class="col sqs-col-photo">
+                        <div class="sqs-block image-block sqs-block-image" data-aspect-ratio="136.28691983122363" data-block-type="5" id="block-1f47fbbe7cae8fdeba8c">
+                          <div class="sqs-block-content">
+                            <div class="image-block-outer-wrapper layout-caption-below design-layout-inline combination-animation-site-default individual-animation-site-default individual-text-animation-site-default" data-test="image-block-inline-outer-wrapper">
+                              <noscript>
+                                <img class="picture" src="<%= profile.image %>" alt="<%= profile.image %>" />
+                              </noscript>
+                              <img class="thumb-image picture" data-src="<%= profile.image %>" data-image="<%= profile.image %>" data-image-dimensions="" data-image-focal-point="0.5,0.5" alt="<%= profile.image %>" data-load="false" data-image-id="60ba7def6ab3a1722eeb654b" data-type="image" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col sqs-col-trait">
+                        <div class="row sqs-row">
+                          <div class="col sqs-col-sub-trait">
+                            <div class="trait">
+                              <p class="center" style="height: 25%; line-height: 1">MBTI</p>
+                              <p class="trait-font center" style="height: 40%"><%= profile.mbti %></p>
+                            </div>
+                          </div>
+                          <div class="col sqs-col-sub-trait">
+                            <div class="trait">
+                              <p class="center" style="height: 25%; line-height: 1">Enneagram</p>
+                              <p class="trait-font center" style="height: 40%"><%= profile.enneagram %></p>
+                            </div>
+                          </div>
+                          <div class="col sqs-col-sub-trait">
+                            <div class="trait">
+                              <p class="center" style="height: 25%; line-height: 1">Socionics</p>
+                              <p class="trait-font center" style="height: 40%"><%= profile.socionics %></p>
+                            </div>
+                          </div>
+                          <div class="col sqs-col-sub-trait">
+                            <div class="trait">
+                              <p class="center" style="height: 25%; line-height: 1">Big 5 Sloan</p>
+                              <p class="trait-font center" style="height: 40%"><%= profile.sloan %></p>
+                            </div>
+                          </div>
+                          <div class="col sqs-col-sub-trait">
+                            <div class="trait">
+                              <p class="center" style="height: 25%; line-height: 1">Instinctual Variant</p>
+                              <p class="trait-font center" style="height: 40%"><%= profile.variant %></p>
+                            </div>
+                          </div>
+                          <div class="col sqs-col-sub-trait">
+                            <div class="trait">
+                              <p class="center" style="height: 25%; line-height: 1">Tritype</p>
+                              <p class="trait-font center" style="height: 40%"><%= profile.tritype %></p>
+                            </div>
+                          </div>
+                          <div class="col sqs-col-sub-trait">
+                            <div class="trait">
+                              <p class="center" style="height: 25%; line-height: 1">Attitudinal Psyche</p>
+                              <p class="trait-font center" style="height: 40%"><%= profile.psyche %></p>
+                            </div>
+                          </div>
+                          <div class="col sqs-col-sub-trait">
+                            <div class="trait">
+                              <p class="center" style="height: 25%; line-height: 1">Temperament</p>
+                              <div class="trait-font-special center" style="height: 40%"><%= profile.temperaments %></div>
+                              <!-- <p class="trait-font-special"><%= profile.temperaments %></p> -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-8d8156722d8e328e16b8">
+                      <div class="sqs-block-content">
+                        <p class="" style="white-space:pre-wrap;"><%= profile.description %>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="comment-section">
+                      <div class="comment-heading">
+                       <div class="heading">Comments</div>
+                       <div class="vote-or-comment" id="vote-or-comment">VOTE/COMMENT</div>
+                      </div>
+                      <div class="comment-fliter">
+                        <span class="selected">All</span>
+                        <span>MBTI</span>
+                        <span>Enneagram</span>
+                        <span>Zodiac</span>
+                      </div>
+                      <div class="comment-sorting">
+                        <span class="selected">Recent</span>
+                        <span>Best</span>
+                      </div>
+                      <div class="comment-list">
+                        <div class="input-comment">
+                          <div class="comment">
+                            <div class="comment-top">
+                              <div class="commenter-profile"><img src="https://soulverse.boo.world/images/2.png"></div>
+                              <div class="commenter-name">
+                                Frank James
+                              </div>
+                            </div>
+                            <div>
+                              <input class="
+                              comment-title" placeholder="Title"/>
+                            </div>
+                            <div class="comment-tags">
+                              <span class="mbti">
+                                <select>
+                                  <option value="" disabled selected>MBTI</option>
+                                  <option value="infp">INFP</option>
+                                  <option value="infj">INFJ</option>
+                                  <option value="enfp">ENFP</option>
+                                  <option value="enfj">ENFJ</option>
+                                  <option value="INTJ">INTJ</option>
+                                  <option value="intp">INTP</option>
+                                  <option value="entp">ENTP</option>
+                                  <option value="entj">ENTJ</option>
+                                  <option value="isfp">ISFP</option>
+                                  <option value="isfj">ISFJ</option>
+                                  <option value="esfp">ESFP</option>
+                                  <option value="enfj">ENFJ</option>
+                                  <option value="istp">ISTP</option>
+                                  <option value="istj">ISTJ</option>
+                                  <option value="estp">ESTP</option>
+                                  <option value="estj">ESTJ</option>
+                                </select>
+                              </span>
+                              <span class="enneagram">
+                                <select>
+                                  <option value="" disabled selected>Enneagram</option>
+                                  <option value="1w2">1<label style="background-image: url(/img/wing.png);"><img src='/img/wing.png' /></label>2</option>
+                                  <option value="2w3">2<img src='/img/wing.png' />3</option>
+                                  <option value="3w2">3<img src='/img/wing.png' />2</option>
+                                  <option value="3w4">3<img src='/img/wing.png' />4</option>
+                                  <option value="3w2">4<img src='/img/wing.png' />3</option>
+                                  <option value="4w3">4<img src='/img/wing.png' />5</option>
+                                  <option value="4w5">5<img src='/img/wing.png' />4</option>
+                                  <option value="5w4">5<img src='/img/wing.png' />6</option>
+                                  <option value="5w6">6<img src='/img/wing.png' />5</option>
+                                  <option value="6w5">6<img src='/img/wing.png' />7</option>
+                                  <option value="6w7">7<img src='/img/wing.png' />6</option>
+                                  <option value="7w8">7<img src='/img/wing.png' />8</option>
+                                  <option value="7w9">8<img src='/img/wing.png' />7</option>
+                                  <option value="8w7">8<img src='/img/wing.png' />9</option>
+                                  <option value="8w9">9<img src='/img/wing.png' />8</option>
+                                  <option value="9w1">9<img src='/img/wing.png' />1</option>
+                                </select>
+                              </span>
+                              <span class="zodiac">
+                                <select>
+                                  <option value="" disabled selected>Zodiac</option>
+                                  <option value="Aries">Aries</option>
+                                  <option value="Taurus">Taurus</option>
+                                  <option value="gemini">Gemini</option>
+                                  <option value="cancer">Cancer</option>
+                                  <option value="leo">Leo</option>
+                                  <option value="virgo">Virgo</option>
+                                  <option value="libra">Libra</option>
+                                  <option value="Scorpio">Scorpio</option>
+                                  <option value="Sagittarius">Sagittarius</option>
+                                  <option value="Capricorn">Capricorn</option>
+                                  <option value="Aquarius">Aquarius</option>
+                                  <option value="Pisces">Pisces</option>
+                                </select>
+                              </span>
+                            </div>
+                            <textarea class="comment-content" placeholder="Share your typology reasoning by commenting here" onkeyup="textAreaAdjust(this)" style="overflow:hidden"></textarea>
+                            <div class="button-container">
+                              <button type="submit" class="send-button" onclick="sendButtonClick(this)">
+                                <span class="material-icons">&#xe163;</span>
+                              </button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <div class="comment"> 
+                          <div class="comment-top">
+                            <div class="commenter-profile"><img src="https://soulverse.boo.world/images/2.png"></div>
+                            <div class="commenter-name">
+                              Frank James
+                            </div>
+                          </div>
+                          <div class="comment-title">
+                            He is definitely an INTP
+                          </div>
+                          <div class="comment-tags">
+                            <span class="mbti">INPT</span>
+                            <span class="enneagram">3<img src='/img/wing.png'/>3</span>
+                            <span class="zodiac">Cancer</span>
+                          </div>
+                          <p class="comment-content">"He thinks about future, Ni. He is productive too, Te. That makes him INTJ ^_^"
+lmao ok guys sure.
+Let me make it easy for you guys:
+The Arguments - Ti vs Te & Ne vs Ni.
+1 - Ti vs Te:
+• Ti: Elon wants to create new things that don't exists, no one imagines. He tends to assume that the information he has
+is true to come to the conclusion.
+• Te: Te is mostly based on facts & evidence i.e the things which have been working for so long, on the ways everyone
+can trust/rely on.
+Elon Musk is an obvious Ti user.
+2 - Ne vs Ni:
+• Ne: His ideas are divergent; He does not stick to one idea, he is constantly thinking about other possible outcomes.
+• Ni: The individual who uses Ni has a clear vision about his idea & decides to follow it right away.
+~ Also, some other arguments I have:
+- INTJs are serious people, INTPs are more flexible i.e Elon Musk is an "easy come, easy go" type of person, His Fe is so obvious, he does not takes jokes or anything personally.
+- Elon Musk is just a productive INTP who gets things done, that's why people think of him as an INTJ.<div class="comment-likes">
+                            <span class="heart-shape" onclick="likeClicked(this)">
+                              <span class="material-icons">&#xe87d;</span>
+                            </span></span><span>120</span>
+                          </div>
+                        </div>
+                        <div class="comment">
+                          <div class="comment-top">
+                            <div class="commenter-profile"><img src="https://soulverse.boo.world/images/3.png"></div>
+                            <div class="commenter-name">
+                              Daniel Craig
+                            </div>
+                          </div>
+                          <div class="comment-title">
+                            Just not an INTJ
+                          </div>
+                          <div class="comment-tags">
+                            <span class="mbti">INPT</span>
+                          </div>
+                          <p class="comment-content">I want Elon Musk to be an INTJ more than anyone, but he isn't...
+People think that Elon has Ni because of his long-term vision for humanity becoming a multi-planetary species, but the way he got to this conclusion is through Ti-Ne - by envisioning all the possibilities and choosing the Ti path the makes the most sense.
+Elon's mannerisms, jokes, are very based on Ne. He has so much Ne that I even considered ENTP, but INTP is the most likely choice; watch the video if you're still not convinced.</p><div class="comment-likes">
+                          <span class="heart-shape" onclick="likeClicked(this)">
+                            <span class="material-icons">&#xe87d;</span>
+                          </span><span class="like-number">100</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+<%- include('partials/epilogue.ejs') %>
